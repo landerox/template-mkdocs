@@ -1,0 +1,104 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "files": ["**", ".*/**"],
+  "words": [
+    "better",
+    "bookworm",
+    "customizations",
+    "fonts",
+    "glightbox",
+    "inlinehilite",
+    "linenums",
+    "mermaid",
+    "pymdownx",
+    "pyupgrade"
+  ],
+  "ignoreWords": [
+    "bar",
+    "cd",
+    "ci",
+    "dev",
+    "foo",
+    "nd",
+    "prd",
+    "qa",
+    "repo",
+    "req",
+    "temp"
+  ],
+  "import": [],
+  "dictionaries": [
+    "aws",
+    "bash",
+    "companies",
+    "css",
+    "data-science",
+    "devops",
+    "docker",
+    "en_GB",
+    "en_US",
+    "gcp",
+    "html",
+    "k8s",
+    "markdown",
+    "misc",
+    "node",
+    "npm",
+    "python",
+    "softwareTerms",
+    "typescript"
+  ],
+  "dictionaryDefinitions": [],
+  "useGitignore": true,
+  "ignorePaths": [
+    ".coverage",
+    ".git",
+    ".mypy_cache",
+    ".pre-commit-cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pycache__",
+    "*.egg-info",
+    "build",
+    "dist",
+    "htmlcov",
+    "node_modules",
+    "site",
+    "temp",
+    "tmp",
+    "uv.lock"
+  ],
+  "overrides": [
+    {
+      "filename": "**/*.md",
+      "ignoreRegExpList": [
+        "[A-Z]{3,}",
+        "https?://\\S+",
+        "^#+\\s",
+        "```[\\s\\S]*?```",
+        "`[^`\\n]+`"
+      ]
+    },
+    {
+      "filename": "**/*.yaml",
+      "language": "yaml"
+    },
+    {
+      "filename": "**/*.json",
+      "language": "json",
+      "ignoreRegExpList": [
+        "\\w+\\.\\w+"
+      ]
+    }
+  ],
+  "noSuggestDictionaries": [
+    "fonts",
+    "filetypes",
+    "software-terms"
+  ],
+  "allowCompoundWords": true,
+  "caseSensitive": false
+}
