@@ -108,7 +108,7 @@ uv run mkdocs serve
 
 ---
 
-## 🚀 Post-Creation Checklist
+## Post-Creation Checklist
 
 *After creating a new repository from this template, follow these steps to customize the project:*
 
