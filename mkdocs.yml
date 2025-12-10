@@ -1,0 +1,102 @@
+site_name: Project Documentation
+site_description: Documentation template for a project following engineering standards.
+site_author: <Your Name>
+site_url: https://<username>.github.io/<repo-name>/
+repo_url: https://github.com/<username>/<repo-name>
+repo_name: <repo-name>
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2024 - 2025
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
+  - pymdownx.critic:
+      mode: accept
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - abbr
+  - attr_list
+  - md_in_html
+  - footnotes
+
+plugins:
+  - search:
+      lang: en
+  - awesome-pages
+  - glightbox
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+  - redirects:
+      redirect_maps: {}
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/<username>
+  generator: false
+
+extra_css:
+  - assets/stylesheets/extra.css

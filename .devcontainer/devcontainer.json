@@ -1,0 +1,65 @@
+{
+  "name": "MkDocs Template Development Container",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "containerEnv": {
+    "UV_LINK_MODE": "copy",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "python.languageServer": "None",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          }
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+          "editor.wordWrap": "on"
+        },
+        "[toml]": {
+          "editor.defaultFormatter": "tamasfe.even-better-toml"
+        },
+        "[yaml]": {
+          "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "yaml.customTags": [
+          "!!python/name:pymdownx.superfences.fence_code_format",
+          "!!python/name:material.extensions.emoji.twemoji",
+          "!!python/name:material.extensions.emoji.to_svg"
+        ],
+        "yaml.validate": true,
+        "files.associations": {
+          "mkdocs.yml": "yaml"
+        }
+      },
+      "extensions": [
+        "alexkaufman.indent-on-paste",
+        "bierner.markdown-mermaid",
+        "charliermarsh.ruff",
+        "DavidAnson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "ms-pyright.pyright",
+        "ms-python.python",
+        "PKief.material-icon-theme",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "postCreateCommand": "chmod +x .devcontainer/post-create.sh && bash .devcontainer/post-create.sh",
+  "remoteUser": "vscode"
+}
